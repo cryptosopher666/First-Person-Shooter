@@ -38,6 +38,13 @@ public class FPSController : MonoBehaviour
 
     private FPSPlayerAnimations playerAnimation;
 
+    [SerializeField]
+    private WeaponManager weapon_Manager;
+    private FPSWeapon current_Weapon;
+
+    private float fireRate = 15f;
+    private float nextTimeToFire = 0f;
+
     void Start()
     {
         firstPerson_View = transform.Find("FPS View").transform;
@@ -50,6 +57,9 @@ public class FPSController : MonoBehaviour
         default_CamPos = firstPerson_View.localPosition;
 
         playerAnimation = GetComponent<FPSPlayerAnimations>();
+
+        weapon_Manager.weapons[0].SetActive(true);
+        current_Weapon = weapon_Manager.weapons[0].GetComponent<FPSWeapon>();
     }
 
     void Update()
@@ -209,6 +219,27 @@ public class FPSController : MonoBehaviour
         if (is_Crouching && charController.velocity.magnitude > 0)
         {
             playerAnimation.PlayerCrouchWalk(charController.velocity.magnitude);
+        }
+
+        //SHOOTING
+        if (Input.GetMouseButtonDown(0) && Time.time > nextTimeToFire)
+        {
+            nextTimeToFire = Time.time + 1f / fireRate;
+
+            if (is_Crouching)
+            {
+                playerAnimation.Shoot(false);
+            }
+            else
+            {
+                playerAnimation.Shoot(true);
+            }
+
+            current_Weapon.Shoot();
+        }
+        if (Input.GetKeyDown(KeyCode.R)) 
+        { 
+            playerAnimation.ReloadGun();
         }
     }
 }

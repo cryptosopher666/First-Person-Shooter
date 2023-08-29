@@ -8,14 +8,14 @@ public class FPSWeapon : MonoBehaviour
 
     void Awake()
     {
-        muzzleFlash = transform.Find("Muzzle Flash").gameObject;
+        muzzleFlash = transform.Find("MuzzleFlash").gameObject;
         muzzleFlash.SetActive(false);
     }
     public void Shoot()
     {
-        StartCoroutine(TurnOnMuzzeFlash());
+        StartCoroutine(TurnOnMuzzleFlash());
     }
-    IEnumerator TurnOnMuzzeFlash()
+    IEnumerator TurnOnMuzzleFlash()
     {
         muzzleFlash.SetActive(true);
         yield return new WaitForSeconds(0.1f);
