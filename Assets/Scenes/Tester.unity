@@ -322,6 +322,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 971938455302883449, guid: e0b0d5c6da7a1ba43b44902b1ccc456b, type: 3}
+      propertyPath: animController_Pistol
+      value: 
+      objectReference: {fileID: 9100000, guid: e649fd24de75a2f4f897263d4f602363, type: 2}
+    - target: {fileID: 971938455302883449, guid: e0b0d5c6da7a1ba43b44902b1ccc456b, type: 3}
+      propertyPath: animController_MachineGun
+      value: 
+      objectReference: {fileID: 9100000, guid: 0770a54f266a24bc7b5bd0ee2d2b4f0a, type: 2}
     - target: {fileID: 3401096184505911897, guid: e0b0d5c6da7a1ba43b44902b1ccc456b, type: 3}
       propertyPath: m_RootOrder
       value: 0

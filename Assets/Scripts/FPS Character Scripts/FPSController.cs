@@ -65,6 +65,7 @@ public class FPSController : MonoBehaviour
     void Update()
     {
         playerMovement();
+        SelectWeapon();
     }
 
     void playerMovement()
@@ -237,9 +238,57 @@ public class FPSController : MonoBehaviour
 
             current_Weapon.Shoot();
         }
-        if (Input.GetKeyDown(KeyCode.R)) 
-        { 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
             playerAnimation.ReloadGun();
+        }
+    }
+    void SelectWeapon()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (!weapon_Manager.weapons[0].activeInHierarchy)
+            {
+                for (int i = 0; i < weapon_Manager.weapons.Length; i++)
+                {
+                    weapon_Manager.weapons[i].SetActive(false);
+                }
+                current_Weapon = null;
+                weapon_Manager.weapons[0].SetActive(true);
+                current_Weapon = weapon_Manager.weapons[0].GetComponent<FPSWeapon>();
+
+                playerAnimation.ChangeController(true);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (!weapon_Manager.weapons[1].activeInHierarchy)
+            {
+                for (int i = 0; i < weapon_Manager.weapons.Length; i++)
+                {
+                    weapon_Manager.weapons[i].SetActive(false);
+                }
+                current_Weapon = null;
+                weapon_Manager.weapons[1].SetActive(true);
+                current_Weapon = weapon_Manager.weapons[1].GetComponent<FPSWeapon>();
+
+                playerAnimation.ChangeController(false);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if (!weapon_Manager.weapons[2].activeInHierarchy)
+            {
+                for (int i = 0; i < weapon_Manager.weapons.Length; i++)
+                {
+                    weapon_Manager.weapons[i].SetActive(false);
+                }
+                current_Weapon = null;
+                weapon_Manager.weapons[2].SetActive(true);
+                current_Weapon = weapon_Manager.weapons[2].GetComponent<FPSWeapon>();
+
+                playerAnimation.ChangeController(false);
+            }
         }
     }
 }
