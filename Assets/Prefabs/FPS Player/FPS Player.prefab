@@ -1538,6 +1538,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   weapon_Manager: {fileID: 8441873495422282130}
+  handsWeapon_Manager: {fileID: 2769651452443202668}
 --- !u!114 &691505417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2305,6 +2306,7 @@ GameObject:
   - component: {fileID: 8414551609225334803}
   - component: {fileID: 8414551609225334800}
   - component: {fileID: 358773519}
+  - component: {fileID: 2769651452443202668}
   m_Layer: 0
   m_Name: FPS Camera
   m_TagString: MainCamera
@@ -2394,6 +2396,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 1
+--- !u!114 &2769651452443202668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414551609225334801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d13cebd7f55bb47b95903b4f4726f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 8414551609022257122}
+  - {fileID: 8414551609356137116}
+  - {fileID: 8414551609264516031}
 --- !u!1001 &139599549044747882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3289,6 +3307,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4142358340290275204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414551609022257122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27013270129d644f90f36414b84b06d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootClip: {fileID: 8300000, guid: fde722301da517f429eaec7a286baea1, type: 3}
+  reloadClip: {fileID: 8300000, guid: dd37bc8e9362aae4fba8007a3287374d, type: 3}
 --- !u!1001 &8414551609264483487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3477,6 +3509,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1944133286741437168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414551609264516031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27013270129d644f90f36414b84b06d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootClip: {fileID: 8300000, guid: 93f9c3363bf680b46b725c07791f988a, type: 3}
+  reloadClip: {fileID: 8300000, guid: a2eeccbe4afb5b342a8b6e440b9d6529, type: 3}
 --- !u!1001 &8414551609303294953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3741,3 +3787,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &752631335498829265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414551609356137116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27013270129d644f90f36414b84b06d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootClip: {fileID: 8300000, guid: 8077d84082459fd4ba579dda0e473e20, type: 3}
+  reloadClip: {fileID: 8300000, guid: 9e3c5f6b64bc3e74e8ac3e0dcb40a5f0, type: 3}
